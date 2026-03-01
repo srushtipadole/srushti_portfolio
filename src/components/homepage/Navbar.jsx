@@ -31,7 +31,7 @@ const Navbar = () => {
           className="bg-primary text-white hover:bg-primary/90"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/16lB9EpUogTPWar5k6h8H0_TLhKHVMFdG/view?usp=drivesdk"
+              "https://drive.google.com/file/d/1WKNFOxi6-wcgnRt5LJwPeAnML22u141t/view?usp=drivesdk"
             )
           }
         >
