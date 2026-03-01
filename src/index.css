@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-background-light: #f7f7f6;
+  --color-background-dark: #1d1a15;
+  --color-primary: #D0BB95;
+}
+
+body {
+  @apply bg-background-light text-black ;
+}
+.input {
+  @apply w-full px-4 py-3 border rounded-xl outline-none focus:ring-2 focus:ring-[#d8c195];
+}
+html {
+  scroll-behavior: smooth;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.snow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 90px 40px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 130px 80px, #fff, transparent),
+    radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+  background-size: 200px 200px;
+  animation: snowFall 10s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.animate-snow {
+  animation-name: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+/* ===== THIN LED BORDER (EDGE ONLY) ===== */
+.led-card {
+  position: relative;
+  background: #000;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+/* Base border */
+.led-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+.led-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid transparent;
+
+  background:
+    radial-gradient(
+      100px at var(--x, 70%) var(--y, 70%),
+      white,
+      transparent 80%
+    );
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.led-card:hover::after {
+  opacity: 1;
+}
+
+
+.led-card:hover::after {
+  opacity: 40;
+}
+.skill-box {
+  padding: 10px 14px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+.exp-card {
+  position: relative;
+  background: #12110b;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+
+.exp-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.exp-btn {
+  font-size: 13px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.exp-btn:hover {
+  background: white;
+  color: black;
+}
+
+.cert-btn {
+  @apply px-7 py-4 text-sm tracking-wide
+         backdrop-blur-lg bg-white/5
+         border border-white/20
+         text-gray-300
+         rounded-2xl
+         transition-all duration-300
+         hover:border-white
+         hover:text-white
+         hover:-translate-y-1
+         hover:shadow-[0_0_25px_rgba(255,255,255,0.25)];
+}
