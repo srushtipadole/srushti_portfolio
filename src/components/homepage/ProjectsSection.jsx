@@ -60,7 +60,7 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Role-Based Access Control", "REST APIs"],
     type: "Full-Stack",
     image: "/projects/donara.png",
-    repo: "https://github.com/srushtipadole/Bubble-Game"
+    repo: "https://github.com/srushtipadole/Donara"
   }
 ];
 
