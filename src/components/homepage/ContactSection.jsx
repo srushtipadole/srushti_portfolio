@@ -5,7 +5,7 @@ import Navbar from "@/components/homepage/Navbar";
 const contactLinks = {
   LinkedIn: "https://www.linkedin.com/in/srushti-padole-b60b73378/",
   GitHub: "https://github.com/srushtipadole",
-  Resume: "https://drive.google.com/file/d/1T8FX5w_3Bk2NCjLf_M4Y14RNzwYe5ViB/view?usp=drivesdk",
+  Resume: "https://drive.google.com/file/d/1WKNFOxi6-wcgnRt5LJwPeAnML22u141t/view?usp=drivesdk",
 };
 
 export default function Contact() {
